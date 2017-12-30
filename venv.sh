@@ -4,9 +4,9 @@
 venv="${XDG_CACHE_HOME:-$HOME/.cache}/vim/venv"
 
 # Try to detect virtualenv's executable names
-vrenv2=virtualenv2
+vrenv2=virtualenv
 hash virtualenv-2.7 2>/dev/null && vrenv2=virtualenv-2.7
-vrenv3=virtualenv3
+vrenv3=virtualenv
 hash virtualenv-3.5 2>/dev/null && vrenv3=virtualenv-3.5
 
 # Ensure python 2/3 virtual environments

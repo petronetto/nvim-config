@@ -205,13 +205,6 @@ if dein#tap('vim-go')
 		\ | nmap <Leader>gov  <Plug>(go-vet)
 endif
 
-if dein#tap('phpcomplete-extended')
-	autocmd MyAutoCmd FileType php
-		\   nmap <silent> <unique> K <Plug>(phpcomplete-extended-doc)
-		\ | nmap <silent> <unique> <C-]> <Plug>(phpcomplete-extended-goto)
-		\ | nmap <silent> <unique> <Leader>a <Plug>(phpcomplete-extended-add-use)
-endif
-
 if dein#tap('vimagit')
 	nnoremap <silent> mg :Magit<CR>
 endif

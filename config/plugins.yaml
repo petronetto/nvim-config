@@ -14,10 +14,18 @@
 - repo: itchyny/vim-gitbranch
 - repo: itchyny/vim-parenmatch
 - repo: itchyny/vim-cursorword
+- repo: vim-airline/vim-airline
+- repo: vim-airline/vim-airline-themes
+- repo: tpope/vim-fugitive
+- repo: jistr/vim-nerdtree-tabs
   hook_add: |
     autocmd MyAutoCmd FileType denite,qf,nerdtree let b:cursorword=0
     autocmd MyAutoCmd InsertEnter * let b:cursorword=0
     autocmd MyAutoCmd InsertLeave * let b:cursorword=1
+- repo: ryanoasis/vim-devicons
+  hook_add: |
+    set guifont=DroidSansMono_Nerd_Font:h11
+    let g:airline_powerline_fonts = 1
 
 # Lazy Loading
 # ==========================================
@@ -78,13 +86,6 @@
 - { repo: moll/vim-node, on_ft: [ javascript, jsx, javascript.jsx ] }
 - { repo: elzr/vim-json, on_ft: json }
 
-# pangloss/javascript vs. othree/yajs
-#- { repo: othree/yajs.vim, on_ft: [ javascript, jsx, javascript.jsx ]}
-#- { repo: gavocanov/vim-js-indent, on_ft: [ javascript, jsx, javascript.jsx ]}
-#- repo: mxw/vim-jsx
-#  on_ft: [ javascript, jsx, javascript.jsx ]
-#  hook_source: let g:jsx_ext_required = 0
-
 - repo: fatih/vim-go
   on_ft: go
   hook_source: |
@@ -99,9 +100,6 @@
 - { repo: vim-scripts/python_match.vim, on_ft: python }
 - { repo: tmhedberg/SimpylFold, on_ft: python }
 - { repo: raimon49/requirements.txt.vim, on_ft: requirements }
-
-- { repo: StanAngeloff/php.vim, on_ft: php }
-- { repo: shawncplus/phpcomplete.vim, on_ft: php, on_i: 1 }
 
 - { repo: tbastos/vim-lua, on_ft: lua }
 - { repo: osyo-manga/vim-monster, on_ft: ruby }
@@ -352,6 +350,16 @@
     let g:jedi#max_doc_height = 100
     let g:jedi#quickfix_window_height = 10
     let g:jedi#use_splits_not_buffers = 'right'
+
+- repo: m2mdas/phpcomplete-extended
+  on_ft: php
+  hook_source: |
+    let g:phpcomplete_index_composer_command = 'composer --no-ansi'
+  on_i: 1
+  hook_source: autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+
+- repo: m2mdas/phpcomplete-extended-laravel
+  on_ft: php
 
 # Only NeoVim ------------------------------
 - repo: zchee/deoplete-go
