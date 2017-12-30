@@ -1,4 +1,6 @@
-# Rafael Bodill's Neo/vim Config
+# Juliano Petronetto's Neo/vim Config
+
+Base on: https://github.com/rafi/vim-config
 
 Lean mean Neo/vim machine, 30-45ms startup time.
 
@@ -28,7 +30,7 @@ we'll also symlink it for Vim:
 
 ```sh
 mkdir ~/.config
-git clone git://github.com/rafi/vim-config.git ~/.config/nvim
+git clone git://github.com/petronetto/vim-config.git ~/.config/nvim
 ln -s ~/.vim ~/.config/nvim
 ```
 
