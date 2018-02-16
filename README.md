@@ -30,7 +30,7 @@ we'll also symlink it for Vim:
 
 ```sh
 mkdir ~/.config
-git clone git://github.com/petronetto/vim-config.git ~/.config/nvim
+git clone git://github.com/petronetto/nvim-config.git ~/.config/nvim
 ln -s ~/.vim ~/.config/nvim
 ```
 
